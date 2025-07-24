@@ -6,14 +6,17 @@ import WorkInfo from "./WorkInfo.jsx";
 
 function App() {
   return (
-    <div className="app-container">
-      <div className="left-panel">
-        <GeneralInfo />
-        <EduInfo />
-        <WorkInfo />
+    <>
+      <div className="app-container">
+        <div className="left-panel">
+          <GeneralInfo />
+          <EduInfo />
+          <WorkInfo />
+        </div>
+        <div className="preview-container"></div>
       </div>
-      <div className="preview-container"></div>
-    </div>
+      <footer>Designed by Jonah Kachur ・ github</footer>
+    </>
   );
 }
 

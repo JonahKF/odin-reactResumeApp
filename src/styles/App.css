@@ -77,17 +77,40 @@ body {
 
 .app-container {
     display: grid;
-    grid-template-columns: 1fr 3fr;
-    height: 95vh;
-    width: 95vw;
+    grid-template-columns: 1.5fr 3fr;
+    height: 100%;
+    gap: 2.5vw;
 }
 
 .left-panel {
     display: flex;
     flex-direction: column;
-    background-color: blue;
+    /* padding-top: 20px; */
+    margin-left: 2.5vw;
+    gap: 35px;
+    color: white;
+    align-items: center;
+}
+
+.info-card {
+    border-radius: 20px;
+    width: 100%;
+    text-align: center;
+    border: 1px solid pink;
 }
 
 .preview-container {
-    background-color: lightpink;
+    padding-top: 20px;
+    border-radius: 20px;
+    margin-right: 2.5vw;
+    background-color: white;
+}
+
+footer {
+    height: 45px;
+    margin-top: auto;
+    color: #b9bdc7;
+    text-align: center;
+    font-style: italic;
+    font-size: 0.9rem;
 }

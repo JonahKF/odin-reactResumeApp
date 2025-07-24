@@ -3,8 +3,8 @@ import "../styles/GeneralInfo.css";
 
 function GeneralInfo() {
   return (
-    <div className="general-info">
-      <h2>General Info</h2>
+    <div className="general-info info-card">
+      <h2>General Information</h2>
     </div>
   );
 }
