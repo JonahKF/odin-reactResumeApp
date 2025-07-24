@@ -5,14 +5,16 @@ import EduInfo from "./EduInfo.jsx";
 import WorkInfo from "./WorkInfo.jsx";
 
 function App() {
-  <div className="app-container">
-    <div className="left-panel">
-      <GeneralInfo />;
-      <EduInfo />;
-      <WorkInfo />;
+  return (
+    <div className="app-container">
+      <div className="left-panel">
+        <GeneralInfo />
+        <EduInfo />
+        <WorkInfo />
+      </div>
+      <div className="preview-container"></div>
     </div>
-    <div className="preview-container"></div>
-  </div>;
+  );
 }
 
 export default App;
