@@ -6,9 +6,12 @@ import WorkInfo from "./WorkInfo.jsx";
 
 function App() {
   <div className="app-container">
-    <GeneralInfo />;
-    <EduInfo />;
-    <WorkInfo />;
+    <div className="left-panel">
+      <GeneralInfo />;
+      <EduInfo />;
+      <WorkInfo />;
+    </div>
+    <div className="preview-container"></div>
   </div>;
 }
 
