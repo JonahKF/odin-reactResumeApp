@@ -15,7 +15,13 @@ function App() {
         </div>
         <div className="preview-container"></div>
       </div>
-      <footer>Designed by Jonah Kachur ・ github</footer>
+      <footer>
+        <div>Designed by Jonah Kachur</div>
+        <div>・ </div>
+        <a href="https://github.com/JonahKF">
+          <i class="devicon-github-original"></i>
+        </a>
+      </footer>
     </>
   );
 }

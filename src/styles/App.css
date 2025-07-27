@@ -90,17 +90,19 @@ body {
     gap: 35px;
     color: white;
     align-items: center;
+    justify-content: space-between;
 }
 
 .info-card {
-    border-radius: 20px;
+    border-radius: 10px;
     width: 100%;
     text-align: center;
     border: 1px solid pink;
+    background-color: rgba(16, 16, 16, 0.9);
 }
 
 .preview-container {
-    padding-top: 20px;
+    padding-top: 10px;
     border-radius: 20px;
     margin-right: 2.5vw;
     background-color: white;
@@ -113,4 +115,20 @@ footer {
     text-align: center;
     font-style: italic;
     font-size: 0.9rem;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+a {
+    color: inherit;
+    transition: 200ms;
+}
+
+a:hover {
+    color: white;
+}
+
+.devicon-github-original {
+    font-size: 1.5em;
 }
