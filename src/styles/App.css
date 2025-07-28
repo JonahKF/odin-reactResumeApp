@@ -90,7 +90,7 @@ body {
     gap: 35px;
     color: white;
     align-items: center;
-    justify-content: space-between;
+    /* justify-content: space-between; */
 }
 
 .info-card {
@@ -122,6 +122,7 @@ footer {
     display: flex;
     gap: 10px;
     justify-content: center;
+    z-index: 10;
 }
 
 a {
