@@ -1,4 +1,4 @@
-// import { useState } from "react";
+import CustomInput from "./CustomInput.jsx";
 import "../styles/EduInfo.css";
 
 function EduInfo() {

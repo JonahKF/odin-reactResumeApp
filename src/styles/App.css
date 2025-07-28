@@ -77,16 +77,16 @@ body {
 
 .app-container {
     display: grid;
-    grid-template-columns: 1.5fr 3fr;
+    grid-template-columns: 1.5fr 2fr;
     height: 100%;
-    gap: 2.5vw;
+    gap: 6.5vw;
 }
 
 .left-panel {
     display: flex;
     flex-direction: column;
     /* padding-top: 20px; */
-    margin-left: 2.5vw;
+    margin-left: 5.5vw;
     gap: 35px;
     color: white;
     align-items: center;
@@ -106,6 +106,10 @@ body {
     border-radius: 20px;
     margin-right: 2.5vw;
     background-color: white;
+}
+
+.resume-preview {
+    color: black;
 }
 
 footer {

@@ -1,10 +1,11 @@
-// import { useState } from "react";
 import "../styles/ResumePreview.css";
 
-function ResumePreview() {
+function ResumePreview({ personData }) {
   return (
     <div className="resume-preview">
-      <h2>Preview</h2>
+      <h1>
+        {personData.firstName} {personData.lastName}
+      </h1>
     </div>
   );
 }
