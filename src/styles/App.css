@@ -112,6 +112,15 @@ body {
     color: black;
 }
 
+.skill-category {
+    display: flex;
+    gap: 9px;
+    > span {
+        display: flex;
+        gap: 9px;
+    }
+}
+
 footer {
     height: 45px;
     margin-top: auto;

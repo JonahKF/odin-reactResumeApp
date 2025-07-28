@@ -36,8 +36,8 @@ function App() {
       <div className="app-container">
         <div className="left-panel">
           <GeneralInfo personData={person} onChange={handlePersonChange} />
-          <EduInfo personData={person} onChange={handlePersonChange} />
           <WorkInfo personData={person} onChange={handlePersonChange} />
+          <EduInfo personData={person} onChange={handlePersonChange} />
         </div>
         <div className="preview-container">
           <ResumePreview personData={person} />
