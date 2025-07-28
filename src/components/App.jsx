@@ -20,6 +20,8 @@ function App() {
     }));
   };
 
+  console.log({ person });
+
   return (
     <>
       <div className="app-container">
@@ -36,7 +38,7 @@ function App() {
         <div>Designed by Jonah Kachur</div>
         <div>・ </div>
         <a href="https://github.com/JonahKF">
-          <i class="devicon-github-original"></i>
+          <i className="devicon-github-original"></i>
         </a>
       </footer>
     </>
