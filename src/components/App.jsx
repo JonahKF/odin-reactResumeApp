@@ -45,6 +45,18 @@ function App() {
         ],
       },
     },
+    education: {
+      "New York University": {
+        degree: "M.S. in Computer Science",
+        startYear: "2013",
+        endYear: "2015",
+      },
+      "Princeton University": {
+        degree: "B.S. in Computer Science",
+        startYear: "2009",
+        endYear: "2013",
+      },
+    },
   });
 
   const handlePersonChange = (field, value) => {

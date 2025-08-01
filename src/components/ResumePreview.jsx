@@ -3,6 +3,7 @@ import "../styles/ResumePreview.css";
 function ResumePreview({ personData }) {
   const skillCategories = Object.keys(personData.skills);
   const companiesWorked = Object.keys(personData.experience);
+  const universitiesAttended = Object.keys(personData.education);
 
   return (
     <div className="resume-preview">
@@ -13,7 +14,7 @@ function ResumePreview({ personData }) {
       <h2 className="job-title">{personData.jobTitle}</h2>
 
       <div className="contact-and-location">
-        {personData.phone} {personData.email} {personData.location}
+        {personData.phone} | {personData.email} | {personData.location}
       </div>
 
       <div className="summary-container">
@@ -25,13 +26,15 @@ function ResumePreview({ personData }) {
         <h3>Experience</h3>
         {companiesWorked.map((company) => (
           <div key={company} className="company-container">
-            <h4>{company}:</h4>
-            <div>{personData.experience[company].position}</div>
-            <div>
-              {personData.experience[company].startYear} -{" "}
-              {personData.experience[company].endYear}
+            <h4>{company}</h4>
+            <div className="position-date-wrapper">
+              <span>{personData.experience[company].position}</span>
+              <span>
+                {personData.experience[company].startYear} -{" "}
+                {personData.experience[company].endYear}
+              </span>
             </div>
-            <div>{company.description}</div>
+            <div>{personData.experience[company].description}</div>
             <ul>
               {personData.experience[company].points.map((point) => (
                 <li key={point}>{point}</li>
@@ -43,6 +46,18 @@ function ResumePreview({ personData }) {
 
       <div className="education-container">
         <h3>Education</h3>
+        {universitiesAttended.map((university) => (
+          <div key={university} className="university-container">
+            <h4>{university}</h4>
+            <div className="degree-date-wrapper">
+              <span>{personData.education[university].degree}</span>
+              <span>
+                {personData.education[university].startYear} -{" "}
+                {personData.education[university].endYear}
+              </span>
+            </div>
+          </div>
+        ))}
       </div>
 
       <div className="skills-container">
