@@ -9,7 +9,7 @@ function App() {
   const [person, setPerson] = useState({
     firstName: "John",
     lastName: "Placeholder",
-    jobTitle: "Marketing Manager",
+    jobTitle: "Tech Lead",
     email: "example@email.com",
     phone: "123-456-7890",
     location: "New York, NY",
