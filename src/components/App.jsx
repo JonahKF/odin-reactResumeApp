@@ -15,11 +15,6 @@ function App() {
     location: "New York, NY",
     summary:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse feugiat et sem ut aliquam. Donec fermentum pharetra massa, ut ullamcorper diam ultricies nec. In felis dui, efficitur ac gravida sed, finibus et odio. Quisque a efficitur magna. Proin in aliquam odio. Morbi ultrices, diam eget consectetur convallis, dolor nisl semper nisi, nec posuere nulla magna in magna.",
-    skills: {
-      "Front-End": ["React", "CSS", "HTML5"],
-      "Back-End": ["Node.js", "Express", "PostgreSQL"],
-      "Dev-Tools": ["Git", "Webpack", "Docker"],
-    },
     experience: {
       "Placeholder Corp": {
         position: "Full Stack Developer",
@@ -56,6 +51,11 @@ function App() {
         startYear: "2009",
         endYear: "2013",
       },
+    },
+    skills: {
+      "Front-End": ["React", "CSS", "HTML5"],
+      "Back-End": ["Node.js", "Express", "PostgreSQL"],
+      "Dev-Tools": ["Git", "Webpack", "Docker"],
     },
   });
 
