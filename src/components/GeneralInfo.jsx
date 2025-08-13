@@ -20,12 +20,6 @@ function GeneralInfo({ personData, onChange }) {
         />
       </div>
 
-      <CustomInput
-        field="jobTitle"
-        value={personData.jobTitle}
-        onChange={onChange}
-      />
-
       <CustomInput field="phone" value={personData.phone} onChange={onChange} />
 
       <CustomInput field="email" value={personData.email} onChange={onChange} />
