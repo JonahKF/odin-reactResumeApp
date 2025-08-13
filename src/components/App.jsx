@@ -66,7 +66,7 @@ function App() {
     }));
   };
 
-  console.log({ person });
+  // console.log({ person });
 
   return (
     <>
