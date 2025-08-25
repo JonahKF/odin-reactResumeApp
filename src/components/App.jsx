@@ -66,6 +66,19 @@ function App() {
     }));
   };
 
+  const handleCompanyInfoChange = (companyName, field, value) => {
+    setPerson((prevPerson) => ({
+      ...prevPerson,
+      experience: {
+        ...prevPerson.experience,
+        [companyName]: {
+          ...prevPerson.experience[companyName],
+          [field]: value,
+        },
+      },
+    }));
+  };
+
   // console.log({ person });
 
   return (
@@ -73,7 +86,7 @@ function App() {
       <div className="app-container">
         <div className="left-panel">
           <GeneralInfo personData={person} onChange={handlePersonChange} />
-          <WorkInfo personData={person} onChange={handlePersonChange} />
+          <WorkInfo personData={person} onChange={handleCompanyInfoChange} />
           <EduInfo personData={person} onChange={handlePersonChange} />
         </div>
         <div className="preview-container">

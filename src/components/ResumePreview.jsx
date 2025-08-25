@@ -5,6 +5,8 @@ function ResumePreview({ personData }) {
   const companiesWorked = Object.keys(personData.experience);
   const universitiesAttended = Object.keys(personData.education);
 
+  console.log(personData);
+
   return (
     <div className="resume-preview">
       <h1 className="resume-name">
