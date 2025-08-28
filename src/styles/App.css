@@ -78,18 +78,20 @@ body {
 .app-container {
     display: flex;
     justify-content: space-evenly;
-    padding: 0 50px 0 50px;
+    padding: 0 2.5vw 0 2.5vw;
     height: 100%;
-    gap: 50px;
+    gap: 2.5vw;
 }
 
 .left-panel {
     display: flex;
     flex-direction: column;
-    gap: 50px;
+    gap: 2.5vw;
     color: white;
     align-items: center;
     min-width: 595px;
+    max-height: calc(100vh - 2.5vw - 2.5vw);
+    overflow-y: auto;
 }
 
 input {
@@ -137,9 +139,18 @@ input {
     color: black;
     max-width: 595px;
     width: 100%;
+    padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.resume-preview h1 {
+    font-size: clamp(1.5rem, 4vw, 5rem);
+}
+
+.resume-preview div {
+    font-size: clamp(0.8rem, 1vw, 5rem);
 }
 
 .skill-category {
@@ -151,9 +162,12 @@ input {
     }
 }
 
+.li-no-decoration {
+    list-style: none;
+}
+
 footer {
-    height: 45px;
-    min-height: 45px;
+    height: 2.5vw;
     margin-top: auto;
     color: #b9bdc7;
     text-align: center;

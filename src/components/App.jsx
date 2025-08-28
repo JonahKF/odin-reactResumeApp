@@ -59,6 +59,7 @@ function App() {
     },
   });
 
+  // Default, use w/ GeneralInfo
   const handlePersonChange = (field, value) => {
     setPerson((prevPerson) => ({
       ...prevPerson,
@@ -66,6 +67,7 @@ function App() {
     }));
   };
 
+  // Memo: This is needed because of how the object treats companyName as a key and points as an array
   const handleCompanyInfoChange = (companyName, field, value) => {
     setPerson((prevPerson) => ({
       ...prevPerson,
@@ -79,6 +81,30 @@ function App() {
     }));
   };
 
+  const handlePointChange = (companyName, index, value) => {
+    setPerson((prevPerson) => {
+      const newPoints = prevPerson.experience[companyName].points.map(
+        (point, i) => {
+          if (i === index) {
+            return value;
+          }
+          return point;
+        },
+      );
+
+      return {
+        ...prevPerson,
+        experience: {
+          ...prevPerson.experience,
+          [companyName]: {
+            ...prevPerson.experience[companyName],
+            points: newPoints,
+          },
+        },
+      };
+    });
+  };
+
   // console.log({ person });
 
   return (
@@ -86,7 +112,11 @@ function App() {
       <div className="app-container">
         <div className="left-panel">
           <GeneralInfo personData={person} onChange={handlePersonChange} />
-          <WorkInfo personData={person} onChange={handleCompanyInfoChange} />
+          <WorkInfo
+            personData={person}
+            onChange={handleCompanyInfoChange}
+            onPointChange={handlePointChange}
+          />
           <EduInfo personData={person} onChange={handlePersonChange} />
         </div>
         <div className="preview-container">
