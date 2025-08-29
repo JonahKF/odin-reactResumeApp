@@ -112,12 +112,35 @@ input {
 
     display: flex;
     flex-direction: column;
+    gap: 6px;
 }
 
 .name-input {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.company-container-input {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 12px;
+}
+
+.company-container-input input {
+    width: 100%;
+}
+
+.company-year-container-input {
+    display: flex;
+    gap: 6px;
+    justify-content: center;
+    align-items: center;
+}
+
+.li-no-decoration {
+    list-style: none;
 }
 
 .preview-container {
@@ -160,10 +183,6 @@ input {
         display: flex;
         gap: 9px;
     }
-}
-
-.li-no-decoration {
-    list-style: none;
 }
 
 footer {

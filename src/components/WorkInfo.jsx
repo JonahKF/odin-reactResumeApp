@@ -18,7 +18,7 @@ function WorkInfo({ personData, onChange, onPointChange }) {
             value={personData.experience[company].position}
             onChange={(field, value) => onChange(company, field, value)}
           />
-          <div>
+          <div className="company-year-container-input">
             <CustomInput
               field="startYear"
               value={personData.experience[company].startYear}
