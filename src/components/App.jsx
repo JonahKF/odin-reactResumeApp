@@ -105,6 +105,30 @@ function App() {
     });
   };
 
+  const handleCompanyRename = (oldCompanyName, newCompanyName) => {
+    if (!newCompanyName || person.experience[newCompanyName]) {
+      return;
+    }
+
+    setPerson((prevPerson) => {
+      const oldExperience = prevPerson.experience;
+
+      const newExperience = Object.keys(oldExperience).reduce((acc, key) => {
+        if (key === oldCompanyName) {
+          acc[newCompanyName] = oldExperience[oldCompanyName];
+        } else {
+          acc[key] = oldExperience[key];
+        }
+        return acc;
+      }, {});
+
+      return {
+        ...prevPerson,
+        experience: newExperience,
+      };
+    });
+  };
+
   // console.log({ person });
 
   return (
@@ -116,6 +140,7 @@ function App() {
             personData={person}
             onChange={handleCompanyInfoChange}
             onPointChange={handlePointChange}
+            onCompanyRename={handleCompanyRename}
           />
           <EduInfo personData={person} onChange={handlePersonChange} />
         </div>

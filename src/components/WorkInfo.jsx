@@ -1,7 +1,7 @@
 import CustomInput from "./CustomInput.jsx";
 import "../styles/WorkInfo.css";
 
-function WorkInfo({ personData, onChange, onPointChange }) {
+function WorkInfo({ personData, onChange, onPointChange, onCompanyRename }) {
   const skillCategories = Object.keys(personData.skills);
   const companiesWorked = Object.keys(personData.experience);
   // console.log(personData);
@@ -10,9 +10,14 @@ function WorkInfo({ personData, onChange, onPointChange }) {
     <div className="work-info info-card">
       <h2>Work Info</h2>
 
-      {companiesWorked.map((company) => (
-        <div key={company} className="company-container-input">
-          <h3>{company}</h3>
+      {companiesWorked.map((company, index) => (
+        <div key={index} className="company-container-input">
+          <CustomInput
+            className="company-name-input"
+            field="companyName"
+            value={company}
+            onChange={(_, newName) => onCompanyRename(company, newName)}
+          />
           <CustomInput
             field="position"
             value={personData.experience[company].position}
